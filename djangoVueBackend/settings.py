@@ -28,12 +28,15 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 # either allow all or use CORS_ORIGIN_WHITELIST
-CORS_ORIGIN_ALLOW_ALL = True
-# CORS_ORIGIN_WHITELIST = (
-#   'http://localhost:8000',
-# )
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ALLOWED_ORIGINS = (
+  'http://localhost:8080',
+)
 
-CSRF_TRUSTED_ORIGINS = ['localhost', 'localhost:8080', 'test.michaelblum.ch']
+CORS_ALLOW_CREDENTIALS = True
+
+# not sure if needed
+# CSRF_TRUSTED_ORIGINS = ['localhost', 'localhost:8080', 'test.michaelblum.ch']
 
 INSTALLED_APPS = [
     'pets',
