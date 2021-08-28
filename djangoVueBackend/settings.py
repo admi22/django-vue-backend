@@ -33,6 +33,8 @@ CORS_ORIGIN_ALLOW_ALL = True
 #   'http://localhost:8000',
 # )
 
+CSRF_TRUSTED_ORIGINS = ['localhost', 'localhost:8080', 'test.michaelblum.ch']
+
 INSTALLED_APPS = [
     'pets',
     'django.contrib.admin',
