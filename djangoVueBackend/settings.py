@@ -31,12 +31,12 @@ ALLOWED_HOSTS = ['104.248.252.144', 'localhost', '.michaelblum.ch']
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ALLOWED_ORIGINS = (
   'http://localhost:8080',
+  'https://test.michaelblum.ch',
 )
 
 CORS_ALLOW_CREDENTIALS = True
 
-# not sure if needed
-# CSRF_TRUSTED_ORIGINS = ['localhost', 'localhost:8080', 'test.michaelblum.ch']
+CSRF_TRUSTED_ORIGINS = ['localhost', 'localhost:8080', 'test.michaelblum.ch']
 
 INSTALLED_APPS = [
     'pets',
