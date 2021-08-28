@@ -5,4 +5,5 @@ from . import views
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
     path('test/', views.test),
+    path('pets/', views.pets),
 ]

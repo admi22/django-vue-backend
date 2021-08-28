@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
+from django.core import serializers
+from .models import Pet
 
 def test(request):
     # data = json.loads(request.body)
@@ -21,3 +23,12 @@ def test(request):
     # response.set_cookie('session_id', session.sessionId)
 
     return response
+
+def pets(request):
+    if request.method == 'GET':
+        pets = Pet.objects.filter()
+        data = serializers.serialize('json', list(pets))
+        return JsonResponse(data, safe=False)
+
+    elif request.method == 'POST':
+        return JsonResponse({'ok': True}, safe=False)
