@@ -1,0 +1,12 @@
+.idea/*
+.idea
+*/.idea/*
+*/.idea
+db
+db.sqlite3
+.env
+.env.local
+*/__pychache__/*
+*/__pychache__/
+*/__pychache__
+/__pychache__
