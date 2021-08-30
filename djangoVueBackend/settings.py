@@ -33,10 +33,19 @@ CORS_ALLOWED_ORIGINS = (
   'http://localhost:8080',
   'https://test.michaelblum.ch',
 )
-
+CORS_EXPOSE_HEADERS = ['Content-Type', 'X-CSRFToken']
 CORS_ALLOW_CREDENTIALS = True
 
 CSRF_TRUSTED_ORIGINS = ['localhost', 'localhost:8080', 'test.michaelblum.ch']
+
+CSRF_COOKIE_SAMESITE = 'Lax'
+SESSION_COOKIE_SAMESITE = 'Lax'
+CSRF_COOKIE_HTTPONLY = True
+SESSION_COOKIE_HTTPONLY = True
+# PROD ONLY
+# CSRF_COOKIE_SECURE = True
+# SESSION_COOKIE_SECURE = True
+
 
 INSTALLED_APPS = [
     'pets',
